@@ -1,21 +1,25 @@
 #include <iostream>
 #include <math.h>
-#include"caniondefensivo.h"
-#include"canionofensivo.h"
+#include"batalla.h"
 #define G 9.81
 #define pi 3.141617
 using namespace std;
 
-void DisparoOfensivoEfectivo ( canionOfensivo disparoO, canionDefensivo disparoD, int Voo){
+batalla batalla_=batalla();
 
-    Impacto impactoEfectivo=disparoO.DisparoOfensivo(disparoD, Voo, false);
+void DisparoOfensivoEfectivo (int Voo){
+
+    canionDefensivo disparoD=canionDefensivo();
+    canionOfensivo disparoO=canionOfensivo();
+
+    Impacto impactoEfectivo=batalla_.DisparoOfensivo(disparoD, disparoO, Voo, false);
     cout <<"disparo ofensivo efectivo"<< endl;
     impactoEfectivo.ImprimirResultados1();
-    Impacto impactoDefensivo=disparoD.DisparoDefensivo2(disparoO,Voo,impactoEfectivo.getangle(),impactoEfectivo.getV0o(),false);
+    Impacto impactoDefensivo=batalla_.DisparoDefensivo2(disparoD,disparoO,Voo,impactoEfectivo.getangle(),impactoEfectivo.getV0o(),false);
     cout <<"disparo defensivo que compromete la efectividad del ataque ofensivo"<< endl;
     impactoDefensivo.ImprimirResultados1();
     cout <<"disparos que neutralizan el ataque defensivo" <<endl;
-   disparoO.DisparoOfensivo2(disparoO,disparoD, Voo,impactoDefensivo.getangle(),impactoDefensivo.getV0o());
+    batalla_.DisparoOfensivo2(disparoD,disparoO, Voo,impactoDefensivo.getangle(),impactoDefensivo.getV0o());
 
 }
 
@@ -26,10 +30,13 @@ int main()
     cin >> Voo;
     canionDefensivo disparoDefensivo=canionDefensivo();
     canionOfensivo disparoOfensivo=canionOfensivo();
-    disparoOfensivo.DisparoOfensivo(disparoDefensivo, Voo);
-//    disparoDefensivo.DisparoDefensivo(disparoOfensivo, Voo);
-//    disparoDefensivo.DisparoDefensivo2(disparoOfensivo,Voo,31,85,true);
-//    disparoOfensivo.DisparoOfensivo2(disparoDefensivo, Voo, 93,85);
-//    DisparoOfensivoEfectivo( disparoOfensivo, disparoDefensivo,Voo);
+   // batalla_.DisparoOfensivo(disparoDefensivo, disparoOfensivo, Voo, true);
+    //batalla_.DisparoDefensivo(disparoDefensivo, disparoOfensivo, Voo);
+    //batalla_.DisparoDefensivo2(disparoDefensivo, disparoOfensivo,Voo,31,85,true);
+    //batalla_.DisparoOfensivo2(disparoDefensivo,disparoOfensivo, Voo, 84,109);
+    //canionDefensivo disparoDefensivo1=canionDefensivo();
+    //canionOfensivo disparoOfensivo1=canionOfensivo();
+    DisparoOfensivoEfectivo(Voo);
+
     return 0;
 }

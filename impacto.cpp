@@ -22,3 +22,13 @@ void Impacto::ImprimirResultados1()
     cout << endl;
 
 }
+
+void Impacto::update(int angle, int V0o, int x, int y, int t)
+{
+
+    this->angle=angle;
+    this->V0o=V0o;
+    this->x=x;
+    this->y=y;
+    this->t=t;
+}

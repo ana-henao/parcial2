@@ -1,7 +1,7 @@
 #ifndef CANIONOFENSIVO_H
 #define CANIONOFENSIVO_H
 #include"impacto.h"
-#include"caniondefensivo.h"
+
 
 
 class canionOfensivo
@@ -13,7 +13,7 @@ private:
     float Yo = Ho;
     float d0 = 0.05*d;
     float ao = 0;
-    Impacto *impactos[3];
+
 
 public:
     canionOfensivo();
@@ -24,8 +24,7 @@ public:
     float getYo(){return Yo;};
     float getd0(){return d0;};
     float getao(){return ao;};
-    Impacto DisparoOfensivo(canionDefensivo disparoD, int Voo, bool mostrar);
-    void DisparoOfensivo2(canionDefensivo disparoD, int Voo, int angleoo, int Vooo);
+    Impacto *impactos[3];
 
 
 };

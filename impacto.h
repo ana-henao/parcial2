@@ -2,6 +2,7 @@
 #define IMPACTO_H
 #include<iostream>
 
+
 using namespace std;
 
 
@@ -22,7 +23,7 @@ public:
     int gety(){return y;};
     int gett(){return t;};
     void ImprimirResultados1();
-
+    void update(int angle,int V0o,int x,int y,int t);
 
 };
 

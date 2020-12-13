@@ -13,18 +13,20 @@ private:
     float Yo = Ho;
     float d0 = 0.05*d;
     float ao = 0;
+    Impacto *impactos[3];
 
 public:
     canionOfensivo();
-    canionOfensivo(float d, float Hd, float ad);
+    canionOfensivo(float d, float Ho, float ao);
     float getd(){return d;};
     float getHo(){return Ho;};
     float getXo(){return Xo;};
     float getYo(){return Yo;};
     float getd0(){return d0;};
     float getao(){return ao;};
-    Impacto DisparoOfensivo(caniondefensivo disparoD, int Voo, bool mostrar);
-    void DisparoOfensivo2(caniondefensivo disparoD, int Voo, int angleoo, int Vooo);
+    Impacto DisparoOfensivo(canionDefensivo disparoD, int Voo, bool mostrar);
+    void DisparoOfensivo2(canionDefensivo disparoD, int Voo, int angleoo, int Vooo);
+
 
 };
 

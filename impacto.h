@@ -1,5 +1,8 @@
 #ifndef IMPACTO_H
 #define IMPACTO_H
+#include<iostream>
+
+using namespace std;
 
 
 class Impacto
@@ -18,6 +21,8 @@ public:
     int getx(){return x;};
     int gety(){return y;};
     int gett(){return t;};
+    void ImprimirResultados1();
+
 
 };
 

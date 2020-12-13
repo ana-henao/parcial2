@@ -1,9 +1,15 @@
 #ifndef CANIONDEFENSIVO_H
 #define CANIONDEFENSIVO_H
 #include"canionofensivo.h"
+#define G 9.81
+#define pi 3.141617
+#include<math.h>
+#include <iostream>
+
+using namespace std;
 
 
-class caniondefensivo
+class canionDefensivo
 {
 private:
     float d = 800;
@@ -14,11 +20,11 @@ private:
     float ad = 0;
 
 public:
-    caniondefensivo();
-    caniondefensivo(float d, float Hd, float ad);
+    canionDefensivo();
+    canionDefensivo(float d, float Hd, float ad);
     void DisparoDefensivo(canionOfensivo disparoO, int Voo);
-    Impacto DisparoDefensivo2(Do disparoO,Dd disparoD, int Voo, int angleoo, int Vooo, bool mostrar)
-    float getd(){return d;};
+    Impacto DisparoDefensivo2(canionOfensivo disparoO, int Voo, int angleoo, int Vooo, bool mostrar);
+    float getd();;
     float getHd(){return Hd;};
     float getXd(){return Xd;};
     float getYd(){return Yd;}

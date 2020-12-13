@@ -263,9 +263,8 @@ int main()
     cout <<"Ingrese Vo desde la cual quiere probar: "<<endl;
     cin >> Voo;
     //DisparoOfensivo(disparoO, disparoD, Voo);
-    //DisparoDefensivo(disparoO, disparoD, Voo);
-    //DisparoDefensivo2(disparoO,disparoD,Voo,31,85);
-    //DisparoDefensivo3(disparoO,disparoD,Voo,31,85);
+    //DisparoDefensivo(disparoO, disparoD, Voo,true);
+    //DisparoDefensivo2(disparoO,disparoD,Voo,31,85,true);
     //DisparoOfensivo2(disparoO, disparoD, Voo, 93,85);
     DisparoOfensivoEfectivo ( disparoO, disparoD,Voo);
 
